@@ -1,0 +1,6 @@
+@HHRRModule_HostAddress = http://localhost:5129
+
+GET {{HHRRModule_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

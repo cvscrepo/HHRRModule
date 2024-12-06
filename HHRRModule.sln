@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule", "HHRRModule\HHRRModule.csproj", "{8945E641-C75C-4DB6-AD1F-26CB4FDBF575}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.BLL", "HHRRModule.BLL\HHRRModule.BLL.csproj", "{EA93BFD0-89FF-4753-A555-C37EAC18D1CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.DAL", "HHRRModule.DAL\HHRRModule.DAL.csproj", "{0BF46AEA-8D99-4463-BFFA-7B2961D5487D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.IOC", "HHRRModule.IOC\HHRRModule.IOC.csproj", "{6D4C8FDC-061A-40BF-B710-98FD0F1C32E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.DTO", "HHRRModule.DTO\HHRRModule.DTO.csproj", "{6B92AD88-902D-46BF-9395-5306BFA27F2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.Utility", "HHRRModule.Utility\HHRRModule.Utility.csproj", "{62D72537-3792-4DF7-ABE6-8F0C2809884C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.Model", "HHRRModule.Model\HHRRModule.Model.csproj", "{C07D08BF-36B2-4EE7-BA66-C4749E57022C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8945E641-C75C-4DB6-AD1F-26CB4FDBF575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8945E641-C75C-4DB6-AD1F-26CB4FDBF575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8945E641-C75C-4DB6-AD1F-26CB4FDBF575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8945E641-C75C-4DB6-AD1F-26CB4FDBF575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA93BFD0-89FF-4753-A555-C37EAC18D1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA93BFD0-89FF-4753-A555-C37EAC18D1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA93BFD0-89FF-4753-A555-C37EAC18D1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA93BFD0-89FF-4753-A555-C37EAC18D1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF46AEA-8D99-4463-BFFA-7B2961D5487D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF46AEA-8D99-4463-BFFA-7B2961D5487D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF46AEA-8D99-4463-BFFA-7B2961D5487D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF46AEA-8D99-4463-BFFA-7B2961D5487D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D4C8FDC-061A-40BF-B710-98FD0F1C32E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D4C8FDC-061A-40BF-B710-98FD0F1C32E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D4C8FDC-061A-40BF-B710-98FD0F1C32E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D4C8FDC-061A-40BF-B710-98FD0F1C32E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B92AD88-902D-46BF-9395-5306BFA27F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B92AD88-902D-46BF-9395-5306BFA27F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B92AD88-902D-46BF-9395-5306BFA27F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B92AD88-902D-46BF-9395-5306BFA27F2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D72537-3792-4DF7-ABE6-8F0C2809884C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D72537-3792-4DF7-ABE6-8F0C2809884C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D72537-3792-4DF7-ABE6-8F0C2809884C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D72537-3792-4DF7-ABE6-8F0C2809884C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C07D08BF-36B2-4EE7-BA66-C4749E57022C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07D08BF-36B2-4EE7-BA66-C4749E57022C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07D08BF-36B2-4EE7-BA66-C4749E57022C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07D08BF-36B2-4EE7-BA66-C4749E57022C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {774CCCFA-371F-4F1F-BABB-33C68AA7BCA9}
+	EndGlobalSection
+EndGlobal

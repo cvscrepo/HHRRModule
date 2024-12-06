@@ -1,0 +1,11 @@
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\bin\Debug\net8.0\HHRRModule.Utility.deps.json
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\bin\Debug\net8.0\HHRRModule.Utility.dll
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\bin\Debug\net8.0\HHRRModule.Utility.pdb
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\HHRRModule.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\HHRRModule.Utility.AssemblyInfoInputs.cache
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\HHRRModule.Utility.AssemblyInfo.cs
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\HHRRModule.Utility.csproj.CoreCompileInputs.cache
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\HHRRModule.Utility.dll
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\refint\HHRRModule.Utility.dll
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\HHRRModule.Utility.pdb
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\ref\HHRRModule.Utility.dll
