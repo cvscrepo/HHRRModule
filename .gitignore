@@ -1,0 +1,79 @@
+# Logs
+*.log
+logs/
+LogFiles/
+
+# Archivos generados por el sistema operativo
+Thumbs.db
+ehthumbs.db
+.DS_Store
+._*
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de configuración locales
+*.config
+*.config.*
+*.env
+
+# Build directories
+bin/
+obj/
+out/
+artifacts/
+
+# Dependencias
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+
+# Archivos de NuGet
+*.nuget/
+
+# Rider y JetBrains IDEs
+.idea/
+*.sln.iml
+
+# Archivos generados por MSBuild
+*.idehelper/
+*.idehelper.cs
+*.vcxproj.user.*
+
+# Archivos temporales
+*.tmp
+*.temp
+~$*
+
+# Archivos de publicación
+wwwroot/dist/
+wwwroot/publish/
+
+# Archivos para Docker (opcionales, descomenta si usas Docker y quieres ignorar)
+# docker-compose.override.yml
+
+# Archivos de secretos locales (se recomienda almacenarlos en Azure Key Vault u otro servicio)
+secrets.json
+
+# Archivos de testing
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.codeCoverage
+
+# Archivos de Resharper
+_ReSharper*/
+*.DotSettings.user
+_ReSharper.Caches/
+
+# Archivos generados por IDEs no deseados
+*.swp
+*.swo
+.idea/

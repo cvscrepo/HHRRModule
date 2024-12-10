@@ -27,11 +27,11 @@ public partial class User
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual ICollection<Employed> Employeds { get; set; } = new List<Employed>();
+    public virtual ICollection<Employed> EmployeesNavigation { get; set; } = new List<Employed>();
 
-    public virtual ICollection<Log> Logs { get; set; } = new List<Log>();
+    public virtual ICollection<Log> LogsNavigation { get; set; } = new List<Log>();
 
-    public virtual Role Role { get; set; } = null!;
+    public virtual Role RoleNavigation { get; set; } = null!;
 
-    public virtual UserState State { get; set; } = null!;
+    public virtual UserState StateNavigation { get; set; } = null!;
 }

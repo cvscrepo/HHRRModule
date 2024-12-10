@@ -1,4 +1,6 @@
-﻿using HHRRModule.DAL.Repositorios;
+﻿using HHRRModule.BLL.Servicios;
+using HHRRModule.BLL.Servicios.Contrato;
+using HHRRModule.DAL.Repositorios;
 using HHRRModule.DAL.Repositorios.Contrato;
 using HHRRModule.Model;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +23,8 @@ namespace HHRRModule.IOC
                 options.UseSqlServer(configuration.GetConnectionString("CadenaSql"))
             );
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ILoginService, LoginService>();
         }
     }
 }

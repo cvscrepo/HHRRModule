@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HHRRModule")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1cd68849d7b24b825e8dd07c2b2fde1c7c2942d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("HHRRModule")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HHRRModule")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
