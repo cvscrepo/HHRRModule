@@ -3,6 +3,7 @@ using HHRRModule.DTO;
 using HHRRModule.Utility;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace HHRRModule.Controllers
 {
@@ -45,7 +46,7 @@ namespace HHRRModule.Controllers
             ResponseApi response = new ResponseApi();
             try
             {
-                var userLoguedId = User.FindFirst(JwtRegisteredClaimNames.NameId) ?? throw new Exception("El usuario no se encuentra logueado");
+                var userLoguedId = User.FindFirst(ClaimTypes.NameIdentifier) ?? throw new Exception("El usuario no se encuentra logueado");
                 UserDTO userCreated = await _loginService.Register(user);
                 response.Success = true;
                 response.Message = "Usuario creado correctamente";

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HHRRModule.BLL.Servicios.Contrato;
+using HHRRModule.BLL.Servicios_tareas.Contrato;
 using HHRRModule.DAL.Repositorios.Contrato;
 using HHRRModule.DTO;
 using HHRRModule.DTO.Enum;
@@ -9,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,14 +19,13 @@ namespace HHRRModule.BLL.Servicios
     public class UserService : IUserService
     {
         private readonly IGenericRepository<User> _userRepository;
-        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IContextClaimsService _contextClaimsService;
         private readonly IMapper mapper;
 
-        public UserService(IGenericRepository<User> userRepository, IMapper mapper, IHttpContextAccessor httpContextAccessor)
+        public UserService(IGenericRepository<User> userRepository, IMapper mapper, IContextClaimsService contextClaimsService)
         {
             _userRepository = userRepository;
             this.mapper = mapper;
-            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<List<UserDTO>> GetAllUsers()
@@ -56,13 +57,14 @@ namespace HHRRModule.BLL.Servicios
                 throw;
             }
         }
+
         // Found by email
         public async Task<UserDTO> GetUserByEmail(string email)
         {
             try
             {
                 IQueryable<User> users = await _userRepository.Consultar(u => u.Email == email);
-                List<User> queryUsers = users.Include(u => u.EmployeesNavigation).Include(u => u.RoleNavigation).AsEnumerable().ToList();
+                List<User> queryUsers = users.Include(u => u.EmployeesNavigation).Include(u => u.RoleNavigation).Include(u => u.StateNavigation).AsEnumerable().ToList();
                 List<UserDTO> usersDTO = mapper.Map<List<UserDTO>>(queryUsers);
                 return usersDTO.FirstOrDefault();
             }
@@ -70,7 +72,7 @@ namespace HHRRModule.BLL.Servicios
             {
                 throw;
             }
-        } 
+        }
 
         public async Task<UserDTO> CreateUser(UserDTO usuario)
         {
@@ -80,10 +82,15 @@ namespace HHRRModule.BLL.Servicios
                 User newUser = mapper.Map<User>(usuario);
 
                 // Validate that the user is not created yet
-                User userFound = await _userRepository.Obtener(u => u.Email == newUser.Email) ?? throw new Exception("Usuario ya existe");
+                User userFound = await _userRepository.Obtener(u => u.Email == newUser.Email);
+                if (userFound != null)
+                {
+                    throw new Exception("Usuario ya existe");
+                }
 
                 // Validate permissions
-                if (userFound.RoleNavigation.NameRol != RoleEnum.Admin) throw new Exception("No tiene permisos para crear usuarios");
+                var roleUserLogued = _contextClaimsService.ObtenerClaimPorNombre(ClaimTypes.Role);
+                if (roleUserLogued != RoleEnum.Admin) throw new Exception("No tiene permisos para crear usuarios");
 
                 // Add user to repository
                 User createdUser = await _userRepository.Crear(newUser);
@@ -102,7 +109,10 @@ namespace HHRRModule.BLL.Servicios
         {
             try
             {
-
+                // validate permission
+                var idUserLogued = _contextClaimsService.ObtenerIdUsuario();
+                var roleUserLogued = _contextClaimsService.ObtenerClaimPorNombre(ClaimTypes.Role);
+                if (int.Parse(idUserLogued) != usuario.IdUser && roleUserLogued != RoleEnum.Admin) throw new Exception("No tiene permisos para editar este usuario");
 
                 // Found user in database
                 User user = await _userRepository.Obtener(u => u.IdUser == usuario.IdUser) ?? throw new Exception("Usuario no encontrado");
@@ -116,6 +126,33 @@ namespace HHRRModule.BLL.Servicios
                 bool editedUser = await _userRepository.Editar(user);
 
                 return usuario;
+            }
+            catch
+            {
+                throw;
+            }
+        } 
+
+        public async Task<UserDTO> EditUserPassword(UserDTO user)
+        {
+            try
+            {
+                // validate permission
+                var idUserLogued = _contextClaimsService.ObtenerIdUsuario();
+                var roleUserLogued = _contextClaimsService.ObtenerClaimPorNombre(ClaimTypes.Role);
+                if (int.Parse(idUserLogued) != user.IdUser && roleUserLogued != RoleEnum.Admin) throw new Exception("No tiene permisos para editar este usuario");
+
+                // Found user in database
+                User userFound = await _userRepository.Obtener(u => u.IdUser == user.IdUser) ?? throw new Exception("Usuario no encontrado");
+                // Edit user
+                userFound.Password = user.Password;
+                userFound.UpdatedAt = DateTime.Now;
+
+                // Update user in repository
+                bool editedUser = await _userRepository.Editar(userFound);
+                if (!editedUser) throw new Exception("Error al editar usuario");
+
+                return user;
             }
             catch
             {
@@ -138,6 +175,5 @@ namespace HHRRModule.BLL.Servicios
                 throw;
             }
         }
-
     }
 }

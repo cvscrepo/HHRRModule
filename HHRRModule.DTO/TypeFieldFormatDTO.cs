@@ -21,7 +21,5 @@ namespace HHRRModule.DTO
         public DateTime? UpdatedAt { get; set; }
 
         public virtual ICollection<FieldFormatDTO> FieldFormats { get; set; } = new List<FieldFormatDTO>();
-
-        public virtual TypeFormatDTO IdTypeFormatNavigation { get; set; } = null!;
     }
 }

@@ -7,11 +7,12 @@ using Microsoft.AspNetCore.Http;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using HHRRModule.BLL.Servicios_tareas.Contrato;
 
 namespace HHRRModule.BLL.Servicios_tareas
 {
 
-    public class ContextClaimsService
+    public class ContextClaimsService : IContextClaimsService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
 
@@ -51,5 +52,6 @@ namespace HHRRModule.BLL.Servicios_tareas
         {
             return ObtenerClaimPorNombre(ClaimTypes.NameIdentifier);
         }
+        
     }
 }

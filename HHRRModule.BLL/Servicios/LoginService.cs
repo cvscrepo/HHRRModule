@@ -33,14 +33,17 @@ namespace HHRRModule.BLL.Servicios
             try
             {
                 UserDTO userFound = await _userService.GetUserByEmail(user.Email) ?? throw new Exception("Usuario no encontrado");
-
+                if(userFound.StateNavigation.NameState == "Inactivo")
+                {
+                    throw new Exception("Usuario inactivo");
+                }
                 string contrasenaDesncrypt;
                 // Desencriptar la contraseña
                 contrasenaDesncrypt = this.Decrypy(userFound.Password);
 
                 if (userFound.Email == user.Email)
                 {
-                    if (user.Contrasena == contrasenaDesncrypt)
+                    if (user.Password == contrasenaDesncrypt)
                     {
                         var token = GenerateToken(userFound);
                         return token;
@@ -69,6 +72,32 @@ namespace HHRRModule.BLL.Servicios
 
                 // Createe the user
                 return _userService.CreateUser(usuario);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public Task<UserDTO> ChangePassword(ChangePasswordDTO user)
+        {
+            try
+            {
+                // Validate user 
+                UserDTO userFound = _userService.GetUserByEmail(user.Email).Result ?? throw new Exception("Usuario no encontrado");
+                // Validate current password
+                string contrasenaDesncrypt = this.Decrypy(userFound.Password);
+                if (user.Password == contrasenaDesncrypt)
+                {
+                    // Validate new password
+                    string newPasswordValidated = ValidatePassword(user.NewPassword);
+                    userFound.Password = this.Encrypt(newPasswordValidated);
+                    return _userService.EditUser(userFound);
+                }
+                else
+                {
+                    throw new Exception("Contraseña incorrecta");
+                }
             }
             catch
             {
@@ -168,7 +197,7 @@ namespace HHRRModule.BLL.Servicios
 
                 claims.AddClaims(new Claim[]{
                     new Claim(ClaimTypes.Name, usuario.Email),
-                    new Claim(JwtRegisteredClaimNames.NameId, usuario.IdUser.ToString()),
+                    new Claim(ClaimTypes.NameIdentifier, usuario.IdUser.ToString()),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
                     new Claim(ClaimTypes.Role, usuario.RoleNavigation.NameRol)

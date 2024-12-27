@@ -1,3 +1,4 @@
+using HHRRModule.IOC;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -31,6 +32,9 @@ builder.Services.AddAuthentication(config =>
         ValidateAudience = false
     };
 });
+
+//Inyectar dependencias
+builder.Services.InyectarDependencias(builder.Configuration);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

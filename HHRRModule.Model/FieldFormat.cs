@@ -19,7 +19,7 @@ public partial class FieldFormat
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual RequestFormat IdRequestFormatNavigation { get; set; } = null!;
+    public virtual RequestFormat? IdRequestFormatNavigation { get; set; } = null;
 
-    public virtual TypeFieldFormat IdTypeFieldNavigation { get; set; } = null!;
+    public virtual TypeFieldFormat? IdTypeFieldNavigation { get; set; } = null;
 }

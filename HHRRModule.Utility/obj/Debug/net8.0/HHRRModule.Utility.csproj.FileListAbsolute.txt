@@ -9,3 +9,10 @@ C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HH
 C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\refint\HHRRModule.Utility.dll
 C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\HHRRModule.Utility.pdb
 C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\ref\HHRRModule.Utility.dll
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\bin\Debug\net8.0\HHRRModule.DTO.dll
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\bin\Debug\net8.0\HHRRModule.Model.dll
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\bin\Debug\net8.0\HHRRModule.DTO.pdb
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\bin\Debug\net8.0\HHRRModule.Model.pdb
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\HHRRModule.Utility.csproj.AssemblyReference.cache
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\HHRRModule.Utility.sourcelink.json
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Utility\obj\Debug\net8.0\HHRRModule.Utility.csproj.CopyComplete

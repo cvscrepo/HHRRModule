@@ -114,7 +114,7 @@ public partial class HhrrmoduleContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Employed__stateI__4222D4EF");
 
-            entity.HasOne(d => d.User).WithMany(p => p.Employeds)
+            entity.HasOne(d => d.User).WithMany(p => p.EmployeesNavigation)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Employed__userId__412EB0B6");
@@ -167,7 +167,7 @@ public partial class HhrrmoduleContext : DbContext
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.UserId).HasColumnName("userId");
 
-            entity.HasOne(d => d.User).WithMany(p => p.Logs)
+            entity.HasOne(d => d.User).WithMany(p => p.LogsNavigation)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Logs__userId__628FA481");
@@ -348,12 +348,12 @@ public partial class HhrrmoduleContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("urlPhoto");
 
-            entity.HasOne(d => d.Role).WithMany(p => p.Users)
+            entity.HasOne(d => d.RoleNavigation).WithMany(p => p.Users)
                 .HasForeignKey(d => d.RoleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_User_Role");
 
-            entity.HasOne(d => d.State).WithMany(p => p.Users)
+            entity.HasOne(d => d.StateNavigation).WithMany(p => p.Users)
                 .HasForeignKey(d => d.StateId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_User_StateUser");

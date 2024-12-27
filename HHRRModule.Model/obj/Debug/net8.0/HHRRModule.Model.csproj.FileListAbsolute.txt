@@ -12,3 +12,4 @@ C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HH
 C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Model\bin\Debug\net8.0\HHRRModule.Model.runtimeconfig.json
 C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Model\obj\Debug\net8.0\HHRRModule.Model.csproj.AssemblyReference.cache
 C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Model\obj\Debug\net8.0\HHRRModule.Model.genruntimeconfig.cache
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.Model\obj\Debug\net8.0\HHRRModule.Model.sourcelink.json

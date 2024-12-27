@@ -9,3 +9,4 @@ C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HH
 C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.DTO\obj\Debug\net8.0\refint\HHRRModule.DTO.dll
 C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.DTO\obj\Debug\net8.0\HHRRModule.DTO.pdb
 C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.DTO\obj\Debug\net8.0\ref\HHRRModule.DTO.dll
+C:\Users\JuanDavidDiazOrozco\Documents\Proyecto-Talento-Humano\HHRRModuleBack\HHRRModule\HHRRModule.DTO\obj\Debug\net8.0\HHRRModule.DTO.sourcelink.json

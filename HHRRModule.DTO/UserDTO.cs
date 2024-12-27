@@ -32,12 +32,12 @@ namespace HHRRModule.DTO
 
         public DateTime? UpdatedAt { get; set; }
 
-        public virtual ICollection<EmployedDTO> EmployeesNavigation { get; set; } = new List<EmployedDTO>();
+        public virtual ICollection<EmployedDTO>? EmployeesNavigation { get; set; } = new List<EmployedDTO>();
 
-        public virtual ICollection<LogDTO> LogsNavigation { get; set; } = new List<LogDTO>();
+        public virtual ICollection<LogDTO>? LogsNavigation { get; set; } = new List<LogDTO>();
 
-        public virtual RoleDTO RoleNavigation { get; set; } = null!;
+        public virtual RoleDTO? RoleNavigation { get; set; }
 
-        public virtual UserStateDTO StateNavigation { get; set; } = null!;
+        public virtual UserStateDTO? StateNavigation { get; set; }
     }
 }

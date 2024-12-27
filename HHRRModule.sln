@@ -3,19 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule", "HHRRModule\HHRRModule.csproj", "{8945E641-C75C-4DB6-AD1F-26CB4FDBF575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHRRModule", "HHRRModule\HHRRModule.csproj", "{8945E641-C75C-4DB6-AD1F-26CB4FDBF575}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.BLL", "HHRRModule.BLL\HHRRModule.BLL.csproj", "{EA93BFD0-89FF-4753-A555-C37EAC18D1CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHRRModule.BLL", "HHRRModule.BLL\HHRRModule.BLL.csproj", "{EA93BFD0-89FF-4753-A555-C37EAC18D1CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.DAL", "HHRRModule.DAL\HHRRModule.DAL.csproj", "{0BF46AEA-8D99-4463-BFFA-7B2961D5487D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHRRModule.DAL", "HHRRModule.DAL\HHRRModule.DAL.csproj", "{0BF46AEA-8D99-4463-BFFA-7B2961D5487D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.IOC", "HHRRModule.IOC\HHRRModule.IOC.csproj", "{6D4C8FDC-061A-40BF-B710-98FD0F1C32E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHRRModule.IOC", "HHRRModule.IOC\HHRRModule.IOC.csproj", "{6D4C8FDC-061A-40BF-B710-98FD0F1C32E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.DTO", "HHRRModule.DTO\HHRRModule.DTO.csproj", "{6B92AD88-902D-46BF-9395-5306BFA27F2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHRRModule.DTO", "HHRRModule.DTO\HHRRModule.DTO.csproj", "{6B92AD88-902D-46BF-9395-5306BFA27F2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.Utility", "HHRRModule.Utility\HHRRModule.Utility.csproj", "{62D72537-3792-4DF7-ABE6-8F0C2809884C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHRRModule.Utility", "HHRRModule.Utility\HHRRModule.Utility.csproj", "{62D72537-3792-4DF7-ABE6-8F0C2809884C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHRRModule.Model", "HHRRModule.Model\HHRRModule.Model.csproj", "{C07D08BF-36B2-4EE7-BA66-C4749E57022C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHRRModule.Model", "HHRRModule.Model\HHRRModule.Model.csproj", "{C07D08BF-36B2-4EE7-BA66-C4749E57022C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{C1B48870-A6B5-41D4-9A52-5570A7437927}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

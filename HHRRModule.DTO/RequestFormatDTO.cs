@@ -22,7 +22,7 @@ namespace HHRRModule.DTO
 
         public virtual ICollection<FieldFormatDTO> FieldFormats { get; set; } = new List<FieldFormatDTO>();
 
-        public virtual EmployedDTO IdEmployedNavigation { get; set; } = null!;
+        public virtual EmployedDTO? IdEmployedNavigation { get; set; } = null;
 
         public virtual TypeFormatDTO IdTypeFormatNavigation { get; set; } = null!;
 

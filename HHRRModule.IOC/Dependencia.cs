@@ -1,8 +1,11 @@
 ﻿using HHRRModule.BLL.Servicios;
 using HHRRModule.BLL.Servicios.Contrato;
+using HHRRModule.BLL.Servicios_tareas;
+using HHRRModule.BLL.Servicios_tareas.Contrato;
 using HHRRModule.DAL.Repositorios;
 using HHRRModule.DAL.Repositorios.Contrato;
 using HHRRModule.Model;
+using HHRRModule.Utility;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,8 +26,20 @@ namespace HHRRModule.IOC
                 options.UseSqlServer(configuration.GetConnectionString("CadenaSql"))
             );
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddAutoMapper(typeof(AutoMapperProfile));
+            services.AddHttpContextAccessor();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ILoginService, LoginService>();
+            services.AddScoped<IContextClaimsService, ContextClaimsService>();
+            services.AddScoped<IAuthorizationService, AuthorizationService>();
+            services.AddScoped<IFieldFormatService, FieldFormatService>();
+            services.AddScoped<IRequestFormatAuthService, RequestFormatAuthService>();
+            services.AddScoped<IRequestFormatService, RequestFormatService>();
+            services.AddScoped<ITypeFieldFormatService, TypeFieldFormatService>();
+            services.AddScoped<ITypeFormatService, TypeFormatService>();
+            services.AddScoped<IEmployedService, EmployedService>();
+            services.AddScoped<IRoleService, RoleService>();    
+            services.AddScoped<TypeFormatService, TypeFormatService>();
         }
     }
 }

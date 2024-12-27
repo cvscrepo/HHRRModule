@@ -19,5 +19,5 @@ public partial class TypeFieldFormat
 
     public virtual ICollection<FieldFormat> FieldFormats { get; set; } = new List<FieldFormat>();
 
-    public virtual TypeFormat IdTypeFormatNavigation { get; set; } = null!;
+    public virtual TypeFormat? IdTypeFormatNavigation { get; set; } = null;
 }

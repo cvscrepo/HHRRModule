@@ -22,8 +22,6 @@ namespace HHRRModule.DTO
 
         public virtual ICollection<AuthorizationDTO> Authorizations { get; set; } = new List<AuthorizationDTO>();
 
-        public virtual ICollection<RequestFormatDTO> RequestFormats { get; set; } = new List<RequestFormatDTO>();
-
         public virtual ICollection<TypeFieldFormatDTO> TypeFieldFormats { get; set; } = new List<TypeFieldFormatDTO>();
     }
 }
